@@ -3,6 +3,7 @@
 #' This function downloads the postgresql.jar file directly to your R directory
 #'
 #' @return writes postgresql.jar in your R folder
+#' @export
 
 
 download_postgresql <- function(){

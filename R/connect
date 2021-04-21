@@ -3,6 +3,7 @@
 #' Connect to splitgraph
 #'
 #' @return object dbconnect
+#' @export
 
 connect <- function(){
     conn <- dbConnect(
