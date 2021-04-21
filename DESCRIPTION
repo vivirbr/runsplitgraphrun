@@ -15,4 +15,5 @@ Imports:
 	DBI,
     RJDBC,
     dplyr,
-    dbplyr
+    dbplyr,
+    rJava

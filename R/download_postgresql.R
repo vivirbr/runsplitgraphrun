@@ -7,5 +7,5 @@
 
 
 download_postgresql <- function(){
-    download.file(url='https://jdbc.postgresql.org/download/postgresql-42.2.19.jar',destfile=paste0(R.home(),'/postgresql-42.2.19.jar'))
+    download.file(url='https://jdbc.postgresql.org/download/postgresql-42.2.19.jar',destfile=paste0(.libPaths()[1],'/postgresql-42.2.19.jar'))
 }
