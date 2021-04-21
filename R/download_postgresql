@@ -1,0 +1,10 @@
+#' Load a Matrix
+#'
+#' This function downloads the postgresql.jar file directly to your R directory
+#'
+#' @return writes postgresql.jar in your R folder
+
+
+download_postgresql <- function(){
+    download.file(url='https://jdbc.postgresql.org/download/postgresql-42.2.19.jar',destfile=paste0(R.home(),'/postgresql-42.2.19.jar'))
+}

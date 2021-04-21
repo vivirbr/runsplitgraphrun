@@ -1,0 +1,14 @@
+#' connect
+#'
+#' Connect to splitgraph
+#'
+#' @return object dbconnect
+
+connect <- function(){
+    conn <- dbConnect(
+        JDBC("org.postgresql.Driver", paste0(R.home(),'/postgresql-42.2.19.jar')),
+        "jdbc:postgresql://data.splitgraph.com:5432/ddn",
+        user=Sys.getenv("SPLITGRAPH_USER"),
+        password=Sys.getenv("SPLITGRAPH_PASSWORD")
+        )
+    }
