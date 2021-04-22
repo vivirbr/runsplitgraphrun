@@ -11,9 +11,6 @@ connect <- function(database='PUBLIC'){
         JDBC("org.postgresql.Driver", file.path(.libPaths()[1],'postgresql-42.2.19.jar')),
         paste0("jdbc:postgresql://",key_list(keyring = paste0("SPLITGRAPH_",database))$service),
         user=key_list(keyring = paste0("SPLITGRAPH_",database))$username,
-        password=key_get("Splitgraph", key_list(keyring = paste0("SPLITGRAPH_",database))$username, keyring = "SPLITGRAPH_PUBLIC")
+        password=key_get(key_list(keyring = paste0("SPLITGRAPH_",database))$service, key_list(keyring = paste0("SPLITGRAPH_",database))$username, keyring = paste0("SPLITGRAPH_",database))
         )
     }
-
-
-    data.splitgraph.com:5432/ddn
