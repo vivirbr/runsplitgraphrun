@@ -8,7 +8,7 @@
 
 connect <- function(database='PUBLIC'){
     conn <- dbConnect(
-        JDBC("org.postgresql.Driver", paste0(.libPaths()[1],'/postgresql-42.2.19.jar')),
+        JDBC("org.postgresql.Driver", file.path(.libPaths()[1],'postgresql-42.2.19.jar')),
         "jdbc:postgresql://data.splitgraph.com:5432/ddn",
         user=key_list(keyring = paste0("SPLITGRAPH_",database))$username,
         password=key_get("Splitgraph", key_list(keyring = paste0("SPLITGRAPH_",database))$username, keyring = "SPLITGRAPH_PUBLIC")
