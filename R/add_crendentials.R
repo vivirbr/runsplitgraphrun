@@ -5,6 +5,9 @@
 #' @param user - splitgraph user from https://www.splitgraph.com/connect
 #' @param password - splitgraph password from https://www.splitgraph.com/connect
 #' @param database - PRIVATE or PUBLIC - default to PUBLIC
+#' @param host - host from splitgraph
+#' @param database_name - database_name from splitgraph
+#' @param port - port from splitgraph
 #' @return system variables
 #' @export
 
