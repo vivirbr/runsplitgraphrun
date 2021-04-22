@@ -31,6 +31,6 @@ ___
 `library(DBI)` <br>
 `library(RJDBC)` <br>
 `download_postgresql() # this step downloads the postgresql directly to you R folder` <br>
-`add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH')` <br>
+`prompt_credentials()` <br>
 `conn<-connect() # creating your connection and voilà, you are good to go` <br>
 `dbGetQuery(conn,'SELECT * FROM "trase/supply-chains"."supply-chains" LIMIT 10') # your first query` <br>
