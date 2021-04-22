@@ -1,22 +1,18 @@
 # runsplitgraphrun
-
-____
-## What you need
-
-To run splitgraph in your computer you will need some packages that are ideally installed automatically in your computer after installing `runsplitgraphrun`, 
-However, you may have some problems running packages like `rJava`. In this case, make sure that you have `rJava` before starting this process. 
-
-check this [link](https://cimentadaj.github.io/blog/2018-05-25-installing-rjava-on-windows-10/installing-rjava-on-windows-10/) if you need a help with this
-
 ____
 ## Installing dependencies
+
+To run splitgraph in your computer you will need some packages that are ideally installed automatically in your computer after installing `runsplitgraphrun`, 
+However, you may have some problems loading packages like `rJava`. In this case, make sure that you have `rJava` before starting this process. 
+
+check this [link](https://cimentadaj.github.io/blog/2018-05-25-installing-rjava-on-windows-10/installing-rjava-on-windows-10/) if you need a help with this
 
 When installing the package, R will ask you for updating or installing a bunch of packages, you can skip this process if you have: `DBI` and `RJDBC` already installed.
 You can always install these packages in the same way you installed `rJava`:
 
+<code> install.packages('rJava') </code> <br>
 <code> install.packages('DBI') </code> <br>
 <code> install.packages('RJDBC') </code> <br>
-<code> install.packages('rJava') </code> <br>
 
 ___
 ## Getting your credentials
