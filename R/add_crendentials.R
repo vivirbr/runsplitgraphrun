@@ -8,7 +8,7 @@
 #' @return system variables
 #' @export
 
-add_credentials <- function(user,password,database='PUBLIC'){
+add_credentials <- function(user,password,host,port,database,database='PUBLIC'){
         keyring_create(paste0("SPLITGRAPH_",database))
-        key_set_with_value("Splitgraph", user, password = password, keyring = paste0("SPLITGRAPH_",database))
+        key_set_with_value(paste(paste(host,port,sep=':'),database,sep='/'), user, password = password, keyring = paste0("SPLITGRAPH_",database))
         }
