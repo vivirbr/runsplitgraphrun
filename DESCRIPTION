@@ -1,9 +1,9 @@
 Package: runsplitgraphrun
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Creates a connection between R and Splitgraph
+Version: 1.0.0
 Authors@R: 
-    person(given = "Vivian",
-           family = "Ribeiro",
+    person(given = c("Vivian","Harry"),
+           family = c("Ribeiro","Biddle"),
            role = c("aut", "cre"),
            email = "vivian.ribeiro@sei.org",
            comment = c(ORCID = "YOUR-ORCID-ID"))
@@ -16,4 +16,5 @@ Imports:
     RJDBC,
     dplyr,
     dbplyr,
-    rJava
+    rJava,
+    keyring
