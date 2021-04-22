@@ -42,14 +42,12 @@ download_postgresql() # this step downloads the postgresql directly to you R fol
 add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH', database='PUBLIC') 
 #you can also set the credentials for the PRIVATE repo
 ```
-
-#### In case you need to delete existing credentials you can use:
-```R
-keyring_delete(keyring = "SPLITGRAPH_PUBLIC") # or "SPLITGRAPH_PRIVATE"
-```
-
 #### Connection and your first query
 ```R
 conn<-connect(database='PUBLIC') # creating your connection and voilà, you are good to go 
 dbGetQuery(conn,'SELECT * FROM "trase/supply-chains"."supply-chains" LIMIT 10') # your first query
+```
+#### In case you need to delete existing credentials you can use:
+```R
+keyring_delete(keyring = "SPLITGRAPH_PUBLIC") # or "SPLITGRAPH_PRIVATE"
 ```
