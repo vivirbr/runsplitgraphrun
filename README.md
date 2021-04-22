@@ -10,10 +10,11 @@ check this [link](https://cimentadaj.github.io/blog/2018-05-25-installing-rjava-
 When installing the package, R will ask you for updating or installing a bunch of packages, you can skip this process if you have: `DBI` and `RJDBC` already installed.
 You can always install these packages in the same way you installed `rJava`:
 
-<code> install.packages('rJava') </code> <br>
-<code> install.packages('DBI') </code> <br>
-<code> install.packages('RJDBC') </code> <br>
-
+```R
+install.packages('rJava')
+install.packages('DBI')
+install.packages('RJDBC')
+``` 
 ___
 ## Getting your credentials
 
@@ -22,15 +23,17 @@ Don't forget to Sign in and access [Splitgraph](https://www.splitgraph.com/conne
 ___
 ## Now that you have everything let's install this handy package and do your first query
 
-`library(devtools) # to use install_github`  <br>
-`library(rJava)` <br>
+```R
+library(devtools) # to use install_github
+library(rJava)
 
-`install_github('vivirbr/runsplitgraphrun')` <br>
-`library(runsplitgraphrun)` <br>
+install_github('vivirbr/runsplitgraphrun')
+library(runsplitgraphrun)
 
-`library(DBI)` <br>
-`library(RJDBC)` <br>
-`download_postgresql() # this step downloads the postgresql directly to you R folder` <br>
-`add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH')` <br>
-`conn<-connect() # creating your connection and voilà, you are good to go` <br>
-`dbGetQuery(conn,'SELECT * FROM "trase/supply-chains"."supply-chains" LIMIT 10') # your first query` <br>
+library(DBI)
+library(RJDBC)
+download_postgresql() # this step downloads the postgresql directly to you R folder
+add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH')
+conn<-connect() # creating your connection and voilà, you are good to go
+dbGetQuery(conn,'SELECT * FROM "trase/supply-chains"."supply-chains" LIMIT 10') # your first query
+```
