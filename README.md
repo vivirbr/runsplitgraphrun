@@ -39,7 +39,8 @@ download_postgresql() # this step downloads the postgresql directly to you R fol
 
 #### Adding credentials - you only need to add them once
 ```R
-add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH', database='PUBLIC') #you can also set the credentials for the PRIVATE repo
+add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH', database='PUBLIC') 
+#you can also set the credentials for the PRIVATE repo
 ```
 
 #### In case you need to delete existing credentials you can use:
