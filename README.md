@@ -15,13 +15,15 @@ install.packages('rJava')
 install.packages('DBI')
 install.packages('RJDBC')
 ``` 
+<b> The postgresql driver will only work if you have Java 8+ </b>
+
 ___
 ## Getting your credentials
 
 Don't forget to Sign in and access [Splitgraph](https://www.splitgraph.com/connect) to get your credentials Username/Password
 
 ___
-## Now that you have everything let's install this handy package and do your first query
+## Run Splitgraph, Run!
 
 ```R
 library(devtools) # to use install_github
@@ -33,7 +35,20 @@ library(runsplitgraphrun)
 library(DBI)
 library(RJDBC)
 download_postgresql() # this step downloads the postgresql directly to you R folder
-add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH')
-conn<-connect() # creating your connection and voilà, you are good to go
+```
+
+#### Adding credentials - you only need to add them once
+```R
+add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH', database='PUBLIC') #you can also set the credentials for the PRIVATE repo
+```
+
+#### In case you need to delete existing credentials you can use:
+```R
+keyring_delete(keyring = "SPLITGRAPH_PUBLIC") # or "SPLITGRAPH_PRIVATE"
+```
+
+#### Connection and your first query
+```R
+conn<-connect(database='PUBLIC') # creating your connection and voilà, you are good to go 
 dbGetQuery(conn,'SELECT * FROM "trase/supply-chains"."supply-chains" LIMIT 10') # your first query
 ```
