@@ -34,14 +34,21 @@ library(runsplitgraphrun)
 
 library(DBI)
 library(RJDBC)
+library(keyring)
 download_postgresql() # this step downloads the postgresql directly to you R folder
 ```
 
-#### Adding credentials - you only need to add them once
+#### Adding credentials - you only need to add this once
 ```R
-add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',password='YOUR_PASSWORD_FROM_SPLITGRAPH', database='PUBLIC') 
-#you can also set the credentials for the PRIVATE repo
+add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',
+                password='YOUR_PASSWORD_FROM_SPLITGRAPH',
+                host='HOST_FROM_SPLITGRAPH',
+                port='PORT_FROM_SPLITGRAPH',
+                database_name='DATABASE_NAME_FROM_SPLITGRAPH',
+                database='PUBLIC') #you can also set the credentials for the PRIVATE repo
 ```
+the package keyring will ask you a password, you can use any passwork, this is not really useful
+
 #### Connection and your first query
 ```R
 conn<-connect(database='PUBLIC') # creating your connection and voilà, you are good to go 
