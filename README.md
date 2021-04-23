@@ -39,7 +39,7 @@ download_postgresql() # this step downloads the postgresql directly to you R fol
 ```
 
 #### Adding credentials - you only need to add this once
-IMPORTANT: Don't store your credentials - run this function directly in your console to avoid having this saved in your script
+❗ IMPORTANT: Don't store your credentials in a script - run this function directly in your console
 
 ```R
 add_credentials(user='YOUR_USER_FROM_SPLITGRAPH',
