@@ -14,8 +14,24 @@ You can always install these packages in the same way you installed `rJava`:
 install.packages('rJava')
 install.packages('DBI')
 install.packages('RJDBC')
-``` 
+```
 <b> The postgresql driver will only work if you have Java 8+ </b>
+
+Install the devtools package.  On Mac and Linux you will need to first install some additional libraries
+
+- brew: libgit2 (MacOS)
+- deb: libgit2-dev (Debian, Ubuntu, etc)
+- rpm: libgit2-devel (Fedora, CentOS, RHEL)
+
+```R
+install.packages('devtools')
+```
+
+Also install the keyring package: on Mac and Linux you may need additional system libraries, see the [instructions here](https://github.com/r-lib/keyring#installation).
+
+```R
+install.packages('keyring')
+```
 
 ___
 ## Getting your credentials
