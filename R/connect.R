@@ -8,9 +8,10 @@
 
 connect <- function(database='PUBLIC'){
     conn <- dbConnect(
-        JDBC("org.postgresql.Driver", path.expand("~/../postgresql-42.2.19.jar")),
+        JDBC("org.postgresql.Driver", file.path(gsub("/R/.*","",file.path(.libPaths()[1])),'postgresql-42.2.19.jar')),
         paste0("jdbc:postgresql://",key_list(keyring = paste0("SPLITGRAPH_",database))$service),
         user=key_list(keyring = paste0("SPLITGRAPH_",database))$username,
         password=key_get(key_list(keyring = paste0("SPLITGRAPH_",database))$service, key_list(keyring = paste0("SPLITGRAPH_",database))$username, keyring = paste0("SPLITGRAPH_",database))
         )
     }
+
